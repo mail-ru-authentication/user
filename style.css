@@ -1,0 +1,659 @@
+/*zero*/
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+body{
+    font-family: Arial;
+    height: 100%;
+    height: 100%;  
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+html{
+    height: 100%;
+}
+.hidden{
+    display: none !important;
+}
+
+/*---------------------*/
+
+@font-face {
+    font-family: 'Arial';
+    src: url('./ArialMT.ttf');
+    src: local('ArialMT'), local('ArialMT'),
+        url('./ArialMT.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./helvetica_regular.otf');
+    src: local('helvetica_regular'), local('helvetica_regular'),
+        url('./helvetica_regular.otf') format('otf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MailSans';
+    src: url('./MailSans-normal-500-100.ttf');
+    src: local('MailSans-normal-500-100'), local('MailSans-normal-500-100'),
+        url('./MailSans-normal-500-100.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+
+.main{
+    height: 100%;
+}
+.main-wrap{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.form-wrap{
+    flex: 1 1 auto;
+}
+.hidden-section{
+    display: none !important;
+}
+.show-section{
+    display: block !important;
+}
+
+/*---- top header ----*/
+.top-side-header{
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-side-header .left-menu a{
+    padding: 0 8px;
+    color: var(--account_mail_ru_login_1920x893_default-Shark, #2C2D2E);
+    text-align: center;
+    font-family: Arial;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.top-side-header .right-side-btns{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.top-side-header .regidter a{
+    color: var(--account_mail_ru_login_1920x893_default-Blue-Ribbon, #005FF9);
+    text-align: center;
+    font-family: Arial;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.top-side-header .login{
+    padding: 5px 8px;
+    border-radius: 8px;
+    background: var(--account_mail_ru_login_1920x893_default-Blue-Ribbon, #005FF9);
+    color: var(--account_mail_ru_login_1920x893_default-Nero, #FFF);
+    text-align: center;
+    font-family: Arial;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.left-menu{
+    display: flex;
+    align-items: center;
+}
+
+/*--- main header ---*/
+.main-header{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 13px;
+    padding-bottom: 6px;
+    background: var(--account_mail_ru_login_1920x893_default-Blue-Ribbon, #005FF9);
+}
+.main-header-inner{
+    width: 100%;
+    max-width: 1572px;
+    margin: 0 auto;
+}
+.main-header-inner .wrap{
+    padding: 0 17px;
+    margin-left: 84px;
+}
+
+
+/*--- form ---*/
+.form-inner-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+form{
+    border-radius: 12px;
+    border: 1px solid  rgba(0, 16, 61, 0.12);
+    background: var(--account_mail_ru_login_1920x893_default-Nero, #FFF);
+    box-shadow: 0px 2px 0px 0px rgba(0, 16, 61, 0.04);
+    width: 100%;
+    max-width: 422px;
+}
+
+
+/*--- login ---*/
+.login-part h1{
+    margin-bottom: 20px;
+    color: var(--account_mail_ru_login_1920x893_default-Shark, #2C2D2E);
+    text-align: center;
+    font-family: 'MailSans';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; 
+    padding-top: 24px;
+}
+.change-platform{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 33px;
+}
+.change-platform .item{
+    padding: 2px;
+    border-radius: 2px;
+    border: 2px solid var(--account_mail_ru_login_1920x893_default-Blue-Ribbon, #fff);
+    cursor: pointer;
+}
+.change-platform .item.active{
+    border: 2px solid var(--account_mail_ru_login_1920x893_default-Blue-Ribbon, #005FF9);
+}
+.change-platform .item span{
+    color: var(--account_mail_ru_login_1920x893_default-Science-Blue, #005BD1);
+    text-align: center;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.change-platform .item.other{
+    padding: 6px 9px !important;
+    margin-left: -4px;
+}
+.change-platform{
+    margin-bottom: 20px;
+}
+.input-mail-wrap .input{
+    border-radius: 8px;
+    border: 1px solid var(--account-mail-ru-login-1920-x-893-default-stratos-12, rgba(0, 16, 61, 0.12));
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 36px;
+}
+.input-mail-wrap  .form-input{
+   padding: 9px 12px 9px 13px;
+    color: #2C2D2E;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 16px;
+    padding: 0 12px;
+    line-height: 34px;
+    max-width: 214px;
+}
+.input-mail-wrap  .form-input::placeholder{
+    color: var(--account_mail_ru_login_1920x893_default-Oslo-Gray, #87898F);
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.input-mail-wrap select{
+    border-left: 1px solid var(--account-mail-ru-login-1920-x-893-default-stratos-12, rgba(0, 16, 61, 0.12));
+    color: var(--account_mail_ru_login_1920x893_default-Shark, #2C2D2E);
+    font-family:  Helvetica;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    width: 100%;
+    background: transparent;
+    width: 100%;
+    cursor: pointer;
+    max-width: 140px;
+    padding: 0px 9px;
+    height: 34px;
+}
+.login-block{
+    padding: 0 33px;
+}
+.login-block .login-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+.login-block .login-buttons .next{
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--account_mail_ru_login_1920x893_default-Blue-Ribbon, #005FF9);
+    cursor: pointer;
+}
+.login-block .login-buttons .next span{
+    color: var(--account_mail_ru_login_1920x893_default-Nero, #FFF);
+    text-align: center;
+    font-family: 'MailSans';
+    font-size: 14.766px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+.save-in-system{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 8px;
+    color: var(--account_mail_ru_login_1920x893_default-Shark, #2C2D2E);
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.save-in-system label, .save-in-system input{
+    cursor: pointer;
+}
+.oher-variation-login{
+    margin-bottom: 32px;
+    padding: 0 33px;
+}
+.oher-variation-login h4{
+    margin-bottom: 13px;
+    color: var(--account_mail_ru_login_1920x893_default-Shark, #2C2D2E);
+    font-family: 'MailSans';
+    font-size: 14.883px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 134.383% */
+}
+.oher-variation-login .wtap{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 36px;
+}
+.vkid{
+    padding: 7px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--account_mail_ru_login_1920x893_default-Japanese-Laurel, #07F);
+    cursor: pointer;
+    height: 36px;
+}
+.vkid span{
+    color: var(--account_mail_ru_login_1920x893_default-Nero, #FFF);
+    font-family:'MailSans';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; 
+}
+.ysligi{
+    height: 36px;
+    padding: 7px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--account-mail-ru-login-1920-x-893-default-stratos-12, rgba(0, 16, 61, 0.12));
+    cursor: pointer;
+}
+.ysligi span{
+    color: var(--account_mail_ru_login_1920x893_default-Blue-Ribbon, #005FF9);
+    text-align: center;
+    font-family: 'MailSans';
+    font-size: 14.766px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.nex-information{
+    padding: 20px 33px;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--account-mail-ru-login-1920-x-893-default-stratos-12, rgba(0, 16, 61, 0.12));
+}
+.nex-information a{
+    color: var(--account_mail_ru_login_1920x893_default-Science-Blue, #005BD1);
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 133.333% */
+}
+.qr-code-section{
+    padding: 32px;
+    background: var(--account-mail-ru-login-1920-x-893-default-blue-ribbon-4, rgba(0, 95, 249, 0.04));
+}
+.qr-code-section .wrap{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.qr-code-section .text-block p{
+    margin-bottom: 4px;
+    color: var(--account_mail_ru_login_1920x893_default-Shark, #2C2D2E);
+    font-family: 'MailSans';
+    font-size: 16.602px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+.qr-code-section .text-block a{
+    margin-top: 8px;
+    color: var(--account_mail_ru_login_1920x893_default-Science-Blue, #005BD1);
+
+/* account_mail_ru_login_1920x893_default/Arial/Regular 13 */
+font-family: Arial;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px; /* 138.462% */
+}
+
+.qr-code-section .text-block p:first-child{
+    font-family: 'MailSans';
+    font-size: 17px;
+    line-height: 20px;
+}
+.qr-code-section .text-block  p.smaler-p{
+    font-family: 'MailSans';
+    font-size: 13px;
+    line-height: 18px;
+}
+/*--- password ---*/
+.password-part{
+    display: none;
+}
+
+.password-title{
+    padding: 26px 33px 0 33px;
+    margin-bottom: 22px;
+    color: var(--account-mail-ru-login-1920-x-893-default-1-shark, #2C2D2E);
+    font-family: 'MailSans';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 119.467% */
+    margin-bottom: 20px;
+    padding-top: 24px;
+}
+.password-login{
+    padding: 0 33px;
+}
+.password-login{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+.password-login-text{
+    display: flex;
+    align-items: center;
+}
+.password-login-text span{
+    color: var(--account-mail-ru-login-1920-x-893-default-1-shark, #2C2D2E);
+    font-family: 'MailSans';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 138.753% */
+}
+.change-login{
+    color: var(--account-mail-ru-login-1920-x-893-default-1-science-blue, #005BD1);
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.password-block{
+    padding: 0 33px;
+    margin-bottom: 26px;
+}
+.password-block .wrap{
+    padding: 8px 13px;
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid var(--account-mail-ru-login-1920-x-893-default-1-stratos-12, rgba(0, 16, 61, 0.12));
+    margin-bottom: 20px;
+}
+#myPass{
+    color: #2C2D2E; 
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#showPass{
+    display: block;
+}
+#hidePass{
+    display: none;
+}
+
+#showPass.active{
+    display: block;
+}
+#showPass.hidden{
+    display: none;
+}
+#hidePass.active{
+    display: block;
+    opacity: 0.9;
+}
+#hidePass.hidden{
+    display: none;
+}
+.password-block .wrap svg{
+    position: absolute;
+    right: 13px;
+    top: 9px;
+}
+.finish-login-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.finish-login-buttons .next{
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--account_mail_ru_login_1920x893_default-Blue-Ribbon, #005FF9);
+    height: 36px;
+    cursor: pointer;
+}
+.finish-login-buttons .next span{
+    color: var(--account_mail_ru_login_1920x893_default-Nero, #FFF);
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 14.766px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+.save-in-system{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 8px;
+    color: var(--account_mail_ru_login_1920x893_default-Shark, #2C2D2E);
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.save-in-system label, .save-in-system input{
+    cursor: pointer;
+}
+
+.vosstanovit-dostyp-password{
+    padding: 0 33px;
+    padding-top: 22px;
+    padding-bottom: 23px;
+    border-top: 1px solid var(--account-mail-ru-login-1920-x-893-default-1-stratos-12, rgba(0, 16, 61, 0.12));
+    padding-top: 20px;
+}
+.vosstanovit-dostyp-password .inner{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.vosstanovit-dostyp-password .inner a{
+    color: var(--account-mail-ru-login-1920-x-893-default-1-science-blue, #005BD1);
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 133.333% */
+}
+.qr-wrap{
+    padding: 8px;
+    border-radius: 16px;
+    background: var(--account-mail-ru-login-1920-x-893-default-1-gallery, #F0F0F0);
+    width: 32px;
+    height: 32px;
+}
+.password-qr span{
+    color: var(--account-mail-ru-login-1920-x-893-default-1-science-blue, #005BD1);
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 133.333% */
+}
+.password-qr{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/*---- footer ----*/
+.footer .container{
+    padding: 0px 18px;
+    border-top: 1px solid var(--account_mail_ru_login_1920x893_default-Alto, #D5D5D5);
+    background: var(--account_mail_ru_login_1920x893_default-Nero, #FFF);
+}
+.footer .inner{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    justify-content: flex-start;
+}
+.footer a{
+    color: var(--account_mail_ru_login_1920x893_default-Dusty-Gray, #999);
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 233.333% */
+}
+
+
+.btn-freak{
+    position: relative;
+    width: 102px;
+}
+.btn-freak span{
+    position: absolute;
+    width: 100%;
+    top: -7px;
+}
+.vk-freak{
+    width: 40px;
+    position: relative;
+}
+.vk-freak span{
+    position: absolute;
+    top: -6px;
+}
+.yslygi-freak{
+    width: 160px;
+    position: relative;
+}
+.yslygi-freak span{
+    position: absolute;
+    top: -6px;
+}
+.voiti-freak{
+    position: relative;
+    width: 42px;
+}
+.voiti-freak span{
+    position: absolute;
+    top: -6px;
+    left: 0;
+    font-size: 15px !important;
+    font-family: 'MailSans' !important;
+}
+
+.finish-wrap{
+    position: relative;
+}
+.finish-wrap img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.finish-wrap img.active{
+    display: block;
+}
